@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOAT TEAM</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background-image:url('portada.jpeg'); /* CAMBIA AQUI TU IMAGEN */
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+/* CAPA OSCURA */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.15);
+}
+
+/* BANDERAS */
+
+.flags{
+    width:100%;
+    background:rgba(255,255,255,0.15);
+    padding:5px 10px;
+    position:relative;
+    z-index:2;
+    display:flex;
+    gap:8px;
+    align-items:center;
+    overflow-x:auto;
+}
+
+.flags img{
+    width:28px;
+    height:18px;
+    object-fit:cover;
+    border:1px solid #fff;
+}
+
+/* HEADER */
+
+.header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:20px 50px;
+    position:relative;
+    z-index:2;
+}
+
+/* LOGO */
+
+.logo h1{
+    color:white;
+    font-size:55px;
+    font-weight:bold;
+    line-height:1;
+}
+
+.logo p{
+    color:white;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+/* MENU */
+
+.menu{
+    display:flex;
+    gap:40px;
+    margin-top:15px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:yellow;
+    font-size:28px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:white;
+    transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:20px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+    }
+
+    .menu a{
+        font-size:22px;
+    }
+
+    .logo h1{
+        font-size:40px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- BANDERAS -->
+    <div class="flags">
+
+        <!-- PUEDES CAMBIAR LAS BANDERAS -->
+        <img src="https://flagcdn.com/w40/de.png">
+        <img src="https://flagcdn.com/w40/gb.png">
+        <img src="https://flagcdn.com/w40/fr.png">
+        <img src="https://flagcdn.com/w40/it.png">
+        <img src="https://flagcdn.com/w40/kr.png">
+        <img src="https://flagcdn.com/w40/jp.png">
+        <img src="https://flagcdn.com/w40/no.png">
+        <img src="https://flagcdn.com/w40/il.png">
+        <img src="https://flagcdn.com/w40/es.png">
+        <img src="https://flagcdn.com/w40/au.png">
+        <img src="https://flagcdn.com/w40/ar.png">
+        <img src="https://flagcdn.com/w40/pt.png">
+        <img src="https://flagcdn.com/w40/us.png">
+        <img src="https://flagcdn.com/w40/eu.png">
+        <img src="https://flagcdn.com/w40/cn.png">
+        <img src="https://flagcdn.com/w40/in.png">
+        <img src="https://flagcdn.com/w40/ch.png">
+        <img src="https://flagcdn.com/w40/ca.png">
+
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>GOAT TEAM</h1>
+            <p>CLIMBING TREKKING EXPEDITION</p>
+        </div>
+
+        <!-- MENU -->
+        <nav class="menu">
+
+            <!-- CAMBIA LOS # POR TUS LINKS -->
+
+            <a href="#">TREKKING</a>
+
+            <a href="#">CLIMBING</a>
+
+            <a href="#">EVENTS</a>
+
+            <a href="#">CONTACT</a>
+
+        </nav>
+
+    </div>
+
+</section>
+
+</body>
+</html>
