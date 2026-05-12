@@ -21,7 +21,10 @@ body{
     background:#000;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* =========================
+   VERSION PC
+========================= */
+
 .fondo{
     width:100%;
     height:100vh;
@@ -37,7 +40,12 @@ body{
     position:relative;
 }
 
-/* BOTON RETURN */
+/* IMAGEN SOLO CELULAR */
+.imagen-mobile{
+    display:none;
+}
+
+/* BOTON */
 .boton-return{
     position:absolute;
     bottom:40px;
@@ -63,28 +71,41 @@ body{
     color:#000;
 }
 
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
+
 @media(max-width:768px){
 
-    body{
-        overflow:auto;
-    }
-
+    /* QUITA EL FONDO */
     .fondo{
+        background:none;
+        height:auto;
 
-        height:140vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
-        background-size:100% auto;
-
-        background-position:top center;
+        padding-top:20px;
     }
 
+    /* MUESTRA IMAGEN */
+    .imagen-mobile{
+        display:block;
+
+        width:90%;
+        height:60vh;
+
+    object-fit:fill;
+    }
+
+    /* BOTON */
     .boton-return{
 
         left:50%;
-        transform:translateX(-50%);
+        transform:translateX(10%);
 
-        bottom:25px;
+        bottom:20px;
 
         font-size:16px;
 
@@ -100,7 +121,10 @@ body{
 
 <div class="fondo">
 
-    <!-- BOTON LINK -->
+    <!-- IMAGEN SOLO EN CELULAR -->
+    <img src="everest.jpeg" class="imagen-mobile">
+
+    <!-- BOTON -->
     <a href="trekkingMenu.html" class="boton-return">
         RETURN
     </a>
