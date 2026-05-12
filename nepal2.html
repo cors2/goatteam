@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Climbing Nepal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#000;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor{
+    width:100%;
+    height:100vh;
+
+    /* TU IMAGEN DE FONDO */
+    background-image:url('montanista2.jpeg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+    overflow:hidden;
+
+      /* EFECTO BLANCO/GRIS OPACO */
+    filter: grayscale(100%) brightness(1.2) contrast(0.9);
+
+    opacity:0.75;
+}
+
+/* CAPA CLARA */
+.capa{
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.15);
+}
+
+/* BANDERAS */
+.banderas{
+    width:100%;
+    background:#fff;
+    padding:4px 0;
+    text-align:center;
+    white-space:nowrap;
+    overflow-x:auto;
+}
+
+.banderas img{
+    width:32px;
+    margin:0 2px;
+}
+
+/* CONTENIDO */
+.contenido{
+    width:100%;
+    height:calc(100% - 45px);
+
+    display:flex;
+}
+
+/* LADO IZQUIERDO */
+.izquierda{
+    width:42%;
+    position:relative;
+    padding:20px;
+}
+
+/* LOGO PEQUEÑO */
+.logo-top{
+    width:70px;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+/* MONTAÑISTA */
+.montanista{
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:85%;
+}
+
+/* TEXTO CENTRAL */
+.texto-central{
+    position:absolute;
+    top:160px;
+    left:150px;
+
+    text-align:center;
+    color:#000;
+}
+
+.texto-central h1{
+    font-size:55px;
+    line-height:0.9;
+    font-weight:900;
+}
+
+.texto-central h2{
+    font-size:30px;
+    margin-top:5px;
+}
+
+.texto-central p{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* LOGO GOAT */
+.logo-goat{
+    position:absolute;
+    bottom:20px;
+    left:40px;
+
+    width:300px;
+}
+
+/* LADO DERECHO */
+.derecha{
+    width:58%;
+    padding:20px 30px;
+
+    overflow-y:auto;
+
+    color:#111;
+}
+
+/* LISTA */
+.lista{
+    font-size:17px;
+    line-height:1.5;
+    font-weight:bold;
+}
+
+.lista p{
+    margin-bottom:6px;
+}
+
+.dia{
+    color:red;
+    font-weight:900;
+}
+
+@media(max-width:900px){
+
+    .contenido{
+        flex-direction:column;
+        overflow:auto;
+    }
+
+    .izquierda,
+    .derecha{
+        width:100%;
+    }
+
+    .izquierda{
+        height:600px;
+    }
+
+    .texto-central{
+        left:120px;
+    }
+
+    .texto-central h1{
+        font-size:40px;
+    }
+
+    .logo-goat{
+        width:220px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="contenedor">
+
+    <div class="capa">
+
+        <!-- BANDERAS -->
+        <div class="banderas">
+
+            <img src="https://flagcdn.com/w40/gb.png">
+            <img src="https://flagcdn.com/w40/fr.png">
+            <img src="https://flagcdn.com/w40/it.png">
+            <img src="https://flagcdn.com/w40/jp.png">
+            <img src="https://flagcdn.com/w40/es.png">
+            <img src="https://flagcdn.com/w40/us.png">
+            <img src="https://flagcdn.com/w40/de.png">
+            <img src="https://flagcdn.com/w40/ch.png">
+
+        </div>
+
+        <div class="contenido">
+
+            <!-- IZQUIERDA -->
+            <div class="izquierda">
+
+                <!-- LOGO PEQUEÑO -->
+                <img src="logo-circular.png" class="logo-top">
+
+                <!-- IMAGEN PERSONA -->
+                <img src="montanista.jpeg" class="montanista">
+
+                <!-- TEXTO -->
+                <div class="texto-central">
+
+                    <h1>CLIMBING<br>NEPAL</h1>
+
+                    <p>ISLAND PEAK 6189m</p>
+
+                </div>
+
+                <!-- LOGO GOAT -->
+                <img src="logo.png" class="logo-goat">
+
+            </div>
+
+            <!-- DERECHA -->
+            <div class="derecha">
+
+                <div class="lista">
+
+                    <p><span class="dia">Day 1:</span> Arrival in Kathmandu and transfer to the hotel.</p>
+
+                    <p><span class="dia">Day 2:</span> Arrival in Kathmandu and city tour.</p>
+
+                    <p><span class="dia">Day 3:</span> Flight to Lukla and hike to Phakding.</p>
+
+                    <p><span class="dia">Day 4:</span> Hike to Namche Bazaar.</p>
+
+                    <p><span class="dia">Day 5:</span> Rest day in Namche Bazaar.</p>
+
+                    <p><span class="dia">Day 6:</span> Hike to Thyangboche Monastery.</p>
+
+                    <p><span class="dia">Day 7:</span> Hike to Dingboche.</p>
+
+                    <p><span class="dia">Day 8:</span> Hike to Lobuche.</p>
+
+                    <p><span class="dia">Day 9:</span> Trek to Everest Base Camp.</p>
+
+                    <p><span class="dia">Day 10:</span> Trek to Kalapathar and hike to Chukung.</p>
+
+                    <p><span class="dia">Day 11:</span> Trek to Island Peak Base Camp.</p>
+
+                    <p><span class="dia">Day 12:</span> Rest day and preparation for the climb.</p>
+
+                    <p><span class="dia">Day 13:</span> Trek to Island Peak High Camp.</p>
+
+                    <p><span class="dia">Day 14:</span> Summit day of Island Peak.</p>
+
+                    <p><span class="dia">Day 15:</span> Trek to Pangboche.</p>
+
+                    <p><span class="dia">Day 16:</span> Trek to Namche Bazaar.</p>
+
+                    <p><span class="dia">Day 17:</span> Trek to Lukla.</p>
+
+                    <p><span class="dia">Day 18:</span> Return flight to Kathmandu.</p>
+
+                    <p><span class="dia">Day 19:</span> Free day in Kathmandu.</p>
+
+                    <p><span class="dia">Day 20:</span> International departure for home.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
