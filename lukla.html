@@ -16,8 +16,7 @@
 
 body{
     width:100%;
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
     font-family:Arial, Helvetica, sans-serif;
     background:#000;
 }
@@ -29,8 +28,7 @@ body{
 
     background-image:url('lukla.jpeg');
 
-    /* PC */
-    background-size:100% 90%;
+    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
 
@@ -68,12 +66,17 @@ body{
 /* CELULAR */
 @media(max-width:768px){
 
+    body{
+        overflow:auto;
+    }
+
     .fondo{
+
+        height:140vh;
 
         background-size:100% auto;
 
-        background-position:center top;
-
+        background-position:top center;
     }
 
     .boton-return{
