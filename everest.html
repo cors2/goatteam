@@ -16,9 +16,9 @@
 
 body{
     width:100%;
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
     font-family:Arial, Helvetica, sans-serif;
+    background:#000;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -26,12 +26,13 @@ body{
     width:100%;
     height:100vh;
 
-    /* CAMBIA EL NOMBRE POR TU IMAGEN */
     background-image:url('everest.jpeg');
 
-    background-size:100% 95%;
+    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
+
+    background-color:#000;
 
     position:relative;
 }
@@ -60,6 +61,36 @@ body{
 .boton-return:hover{
     background:#d4a017;
     color:#000;
+}
+
+/* CELULAR */
+@media(max-width:768px){
+
+    body{
+        overflow:auto;
+    }
+
+    .fondo{
+
+        height:140vh;
+
+        background-size:100% auto;
+
+        background-position:top center;
+    }
+
+    .boton-return{
+
+        left:50%;
+        transform:translateX(-50%);
+
+        bottom:25px;
+
+        font-size:16px;
+
+        padding:12px 28px;
+    }
+
 }
 
 </style>
